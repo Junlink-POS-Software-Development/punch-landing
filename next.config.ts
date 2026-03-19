@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    ppr: "incremental",
-  },
+  // Removed experimental ppr config to fix build error
 };
 
 export default nextConfig;
