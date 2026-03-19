@@ -2,7 +2,7 @@ import { Banknote, Cloud, Shield } from "lucide-react";
 
 export function CoreValuesSection() {
   return (
-    <section className="py-16 bg-slate-900 text-white relative z-20">
+    <section className="py-16 bg-slate-900/30 backdrop-blur-xl text-white relative z-20 border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
           <div className="p-6 flex flex-col items-center">

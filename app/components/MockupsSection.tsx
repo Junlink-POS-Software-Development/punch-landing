@@ -2,13 +2,13 @@ import { LayoutDashboard, Terminal, Grid, Package, Settings, X, Minus, Plus, Sho
 
 export function MockupsSection() {
   return (
-    <section className="py-24 bg-slate-100 relative z-20 border-b border-slate-200">
+    <section className="py-24 bg-slate-950/50 backdrop-blur-xl relative z-20 border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
             Premium Design, Zero Clutter
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-lg text-slate-400">
             Beautifully designed interfaces that require zero training. Dark-mode optimized for operators working long shifts.
           </p>
         </div>
@@ -17,17 +17,17 @@ export function MockupsSection() {
           {/* Backoffice Desktop Mockup (Monitor Frame) */}
           <div className="relative w-full transform transition-transform hover:scale-[1.02] duration-300 flex flex-col items-center">
             {/* Monitor Display Assembly */}
-            <div className="w-full bg-slate-900 p-2 sm:p-2.5 pb-0 rounded-xl sm:rounded-2xl border border-slate-800 relative z-10 shadow-2xl shadow-slate-300/50">
+            <div className="w-full bg-slate-900 p-2 sm:p-2.5 pb-0 rounded-xl sm:rounded-2xl border border-slate-800 relative z-10 shadow-2xl shadow-black/50">
                {/* Camera Dot */}
                <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-black rounded-full shadow-inner"></div>
                
                {/* Browser window header inside Monitor */}
-               <div className="bg-slate-100 rounded-t-md border-b border-slate-200 px-3 py-2 flex items-center gap-1.5 sm:gap-2 mt-3">
-                 <div className="w-2.5 h-2.5 rounded-full bg-red-400 shadow-[inset_0_1px_2px_rgba(0,0,0,0.1)]"></div>
-                 <div className="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[inset_0_1px_2px_rgba(0,0,0,0.1)]"></div>
-                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[inset_0_1px_2px_rgba(0,0,0,0.1)]"></div>
+               <div className="bg-slate-800 rounded-t-md border-b border-slate-700 px-3 py-2 flex items-center gap-1.5 sm:gap-2 mt-3">
+                 <div className="w-2.5 h-2.5 rounded-full bg-red-400/80 shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)]"></div>
+                 <div className="w-2.5 h-2.5 rounded-full bg-amber-400/80 shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)]"></div>
+                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-400/80 shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)]"></div>
                  {/* Fake Address Bar */}
-                 <div className="mx-auto w-1/2 sm:w-1/3 bg-white h-4 sm:h-5 rounded-[4px] border border-slate-200 flex items-center px-2 shadow-sm">
+                 <div className="mx-auto w-1/2 sm:w-1/3 bg-slate-900 h-4 sm:h-5 rounded-[4px] border border-slate-700 flex items-center px-2 shadow-sm">
                    <div className="w-20 sm:w-32 h-1.5 bg-slate-200 rounded-full"></div>
                  </div>
                </div>
@@ -163,13 +163,13 @@ export function MockupsSection() {
             
           {/* Monitor Stand */}
           <div className="relative flex flex-col items-center z-0 -mt-2">
-            <div className="w-16 sm:w-24 h-8 sm:h-12 bg-gradient-to-b from-slate-400 to-slate-200 border-x border-slate-400"></div>
-            <div className="w-32 sm:w-48 h-3 sm:h-4 bg-slate-300 rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.2)] border-b-2 border-slate-400 -mt-1 relative z-10 flex"></div>
+            <div className="w-16 sm:w-24 h-8 sm:h-12 bg-gradient-to-b from-slate-700 to-slate-900 border-x border-slate-800"></div>
+            <div className="w-32 sm:w-48 h-3 sm:h-4 bg-slate-800 rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.4)] border-b-2 border-slate-900 -mt-1 relative z-10 flex"></div>
           </div>
         </div>
 
           {/* Real POS Terminal Mockup (Tablet Frame) */}
-          <div className="relative w-full transform transition-transform hover:scale-[1.02] duration-300 rounded-3xl sm:rounded-[2.5rem] shadow-2xl shadow-slate-300/50">
+          <div className="relative w-full transform transition-transform hover:scale-[1.02] duration-300 rounded-3xl sm:rounded-[2.5rem] shadow-2xl shadow-black/50">
             {/* Tablet Outer Bezel */}
             <div className="bg-slate-900 p-2.5 sm:p-4 rounded-3xl sm:rounded-[2.5rem] relative flex items-center shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] border border-slate-800 h-[320px] sm:h-[420px]">
               {/* Tablet Camera (Left Bezel) */}

@@ -26,13 +26,13 @@ export function FaqSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(0); // First FAQ open by default
 
   return (
-    <section id="faq" className="py-24 bg-white relative z-20">
+    <section id="faq" className="py-24 bg-slate-900/30 backdrop-blur-xl relative z-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-slate-600">Have questions? We&apos;re here to help.</p>
+          <p className="text-lg text-slate-400">Have questions? We&apos;re here to help.</p>
         </div>
 
         <div className="space-y-4">
@@ -40,14 +40,14 @@ export function FaqSection() {
             <div 
               key={index} 
               className={`border rounded-2xl transition-all duration-300 overflow-hidden ${
-                openFaq === index ? 'border-blue-500 bg-blue-50/30' : 'border-slate-200 hover:border-blue-300'
+                openFaq === index ? 'border-blue-500 bg-blue-500/10' : 'border-slate-800 hover:border-slate-700 bg-slate-900/40 backdrop-blur-md'
               }`}
             >
               <button 
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 className="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none"
               >
-                <span className="font-bold text-lg text-slate-900">{faq.question}</span>
+                <span className="font-bold text-lg text-white">{faq.question}</span>
                 {openFaq === index ? (
                   <ChevronUp className="w-5 h-5 text-blue-600 shrink-0" />
                 ) : (
@@ -56,10 +56,10 @@ export function FaqSection() {
               </button>
               <div 
                 className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${
-                  openFaq === index ? 'max-h-48 pb-6 opacity-100' : 'max-h-0 opacity-0'
+                   openFaq === index ? 'max-h-48 pb-6 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+                <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </div>
             </div>
           ))}
