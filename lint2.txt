@@ -1,0 +1,144 @@
+
+> punch-landing@0.1.0 lint
+> eslint
+
+
+C:\Desktop\junlink-projects\punch-landing\app\components\MockupsSection.tsx
+  1:147  warning  'LineChart' is defined but never used       @typescript-eslint/no-unused-vars
+  1:172  warning  'ArrowDownRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx
+  35:25  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx:35:25
+  33 |               className="absolute rounded-full bg-white animate-twinkle"
+  34 |               style={{
+> 35 |                 top: `${Math.random() * 100}%`,
+     |                         ^^^^^^^^^^^^^ Cannot call impure function
+  36 |                 left: `${Math.random() * 100}%`,
+  37 |                 width: '1px',
+  38 |                 height: '1px',          react-hooks/purity
+  36:26  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx:36:26
+  34 |               style={{
+  35 |                 top: `${Math.random() * 100}%`,
+> 36 |                 left: `${Math.random() * 100}%`,
+     |                          ^^^^^^^^^^^^^ Cannot call impure function
+  37 |                 width: '1px',
+  38 |                 height: '1px',
+  39 |                 '--duration': `${3 + Math.random() * 5}s`,                       react-hooks/purity
+  39:38  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx:39:38
+  37 |                 width: '1px',
+  38 |                 height: '1px',
+> 39 |                 '--duration': `${3 + Math.random() * 5}s`,
+     |                                      ^^^^^^^^^^^^^ Cannot call impure function
+  40 |                 opacity: 0.2 + Math.random() * 0.4,
+  41 |               } as any}
+  42 |             />                                        react-hooks/purity
+  40:32  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx:40:32
+  38 |                 height: '1px',
+  39 |                 '--duration': `${3 + Math.random() * 5}s`,
+> 40 |                 opacity: 0.2 + Math.random() * 0.4,
+     |                                ^^^^^^^^^^^^^ Cannot call impure function
+  41 |               } as any}
+  42 |             />
+  43 |           ))}                                                              react-hooks/purity
+  41:20  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  56:25  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx:56:25
+  54 |               className="absolute rounded-full bg-yellow-50 animate-firefly"
+  55 |               style={{
+> 56 |                 top: `${Math.random() * 100}%`,
+     |                         ^^^^^^^^^^^^^ Cannot call impure function
+  57 |                 left: `${Math.random() * 100}%`,
+  58 |                 width: '1.5px',
+  59 |                 height: '1.5px',  react-hooks/purity
+  57:26  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx:57:26
+  55 |               style={{
+  56 |                 top: `${Math.random() * 100}%`,
+> 57 |                 left: `${Math.random() * 100}%`,
+     |                          ^^^^^^^^^^^^^ Cannot call impure function
+  58 |                 width: '1.5px',
+  59 |                 height: '1.5px',
+  60 |                 '--duration': `${3 + Math.random() * 3}s`,                   react-hooks/purity
+  60:38  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx:60:38
+  58 |                 width: '1.5px',
+  59 |                 height: '1.5px',
+> 60 |                 '--duration': `${3 + Math.random() * 3}s`,
+     |                                      ^^^^^^^^^^^^^ Cannot call impure function
+  61 |               } as any}
+  62 |             />
+  63 |           ))}                                                                          react-hooks/purity
+  61:20  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  73:25  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx:73:25
+  71 |               className="absolute rounded-full bg-lime-50 animate-firefly"
+  72 |               style={{
+> 73 |                 top: `${Math.random() * 100}%`,
+     |                         ^^^^^^^^^^^^^ Cannot call impure function
+  74 |                 left: `${Math.random() * 100}%`,
+  75 |                 width: '1px',
+  76 |                 height: '1px',        react-hooks/purity
+  74:26  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx:74:26
+  72 |               style={{
+  73 |                 top: `${Math.random() * 100}%`,
+> 74 |                 left: `${Math.random() * 100}%`,
+     |                          ^^^^^^^^^^^^^ Cannot call impure function
+  75 |                 width: '1px',
+  76 |                 height: '1px',
+  77 |                 '--duration': `${4 + Math.random() * 4}s`,                       react-hooks/purity
+  77:38  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx:77:38
+  75 |                 width: '1px',
+  76 |                 height: '1px',
+> 77 |                 '--duration': `${4 + Math.random() * 4}s`,
+     |                                      ^^^^^^^^^^^^^ Cannot call impure function
+  78 |               } as any}
+  79 |             />
+  80 |           ))}                                                                              react-hooks/purity
+  78:20  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+
+C:\Desktop\junlink-projects\punch-landing\components\navigation\Footer.tsx
+   1:10  warning  'Zap' is defined but never used                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+  10:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Desktop\junlink-projects\punch-landing\components\navigation\Navigation.tsx
+   4:10  warning  'Zap' is defined but never used                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+  14:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+✖ 19 problems (13 errors, 6 warnings)
+

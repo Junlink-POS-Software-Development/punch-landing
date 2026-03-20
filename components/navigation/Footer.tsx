@@ -1,4 +1,4 @@
-import { Zap } from "lucide-react";
+// Removed unused Zap import
 
 export function Footer() {
   return (
@@ -7,7 +7,8 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-16">
           <div className="col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <img src="/punch-logo.png" alt="Punch POS Logo" className="w-10 h-10 object-contain invert grayscale brightness-200" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/punch-logo.png" alt="Punch POS Logo" className="w-10 h-10 object-contain invert grayscale brightness-200" />
               <span className="font-bold text-white text-xl">Punch POS</span>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed mb-6 max-w-xs">

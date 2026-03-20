@@ -26,7 +26,7 @@ export function FaqSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(0); // First FAQ open by default
 
   return (
-    <section id="faq" className="min-h-screen flex items-center py-24 bg-slate-900/30 relative z-20">
+    <section id="faq" className="py-24 bg-slate-900/30 relative z-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
@@ -45,13 +45,13 @@ export function FaqSection() {
             >
               <button 
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                className="w-full text-left px-6 py-5 flex items-start justify-between gap-4 focus:outline-none"
+                className="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none"
               >
-                <span className="font-bold text-lg text-white leading-snug">{faq.question}</span>
+                <span className="font-bold text-lg text-white">{faq.question}</span>
                 {openFaq === index ? (
-                  <ChevronUp className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                  <ChevronUp className="w-5 h-5 text-blue-600 shrink-0" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
+                  <ChevronDown className="w-5 h-5 text-slate-400 shrink-0" />
                 )}
               </button>
               <div 

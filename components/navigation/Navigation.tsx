@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Zap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react"; // Zap was unused, Menu and X are still used
 
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,6 +11,7 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 w-full bg-slate-950/70 backdrop-blur-md border-b border-slate-800 z-50 transition-all">
       <div className="flex items-center justify-between px-4 sm:px-8 py-4 max-w-7xl mx-auto">
         <div className="flex items-center gap-2 cursor-pointer" onClick={scrollToTop}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/punch-logo.png" alt="Punch POS Logo" className="w-10 h-10 object-contain invert grayscale brightness-200" />
           <span className="text-xl font-bold tracking-tight text-white hidden sm:block">Punch POS</span>
         </div>

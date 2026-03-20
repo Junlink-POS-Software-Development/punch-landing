@@ -1,0 +1,40 @@
+
+> punch-landing@0.1.0 lint
+> eslint
+
+
+C:\Desktop\junlink-projects\punch-landing\app\components\MockupsSection.tsx
+  1:161  warning  'Monitor' is defined but never used     @typescript-eslint/no-unused-vars
+  1:170  warning  'Tablet' is defined but never used      @typescript-eslint/no-unused-vars
+  1:178  warning  'Activity' is defined but never used    @typescript-eslint/no-unused-vars
+  1:188  warning  'RefreshCw' is defined but never used   @typescript-eslint/no-unused-vars
+  1:199  warning  'Smartphone' is defined but never used  @typescript-eslint/no-unused-vars
+  1:211  warning  'CreditCard' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx
+  23:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Desktop\junlink-projects\punch-landing\app\page.tsx:23:5
+  21 |
+  22 |   useEffect(() => {
+> 23 |     setStars(
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  24 |       [...Array(40)].map(() => ({
+  25 |         top: `${Math.random() * 100}%`,
+  26 |         left: `${Math.random() * 100}%`,  react-hooks/set-state-in-effect
+
+C:\Desktop\junlink-projects\punch-landing\components\navigation\Footer.tsx
+   9:59  error    Comments inside children section of tag should be placed inside braces                                                                                                                                                                                                                   react/jsx-no-comment-textnodes
+  11:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Desktop\junlink-projects\punch-landing\components\navigation\Navigation.tsx
+  4:8  warning  'Image' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 10 problems (2 errors, 8 warnings)
+

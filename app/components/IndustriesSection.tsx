@@ -2,7 +2,7 @@ import { ShoppingBag, Pill, ShoppingCart } from "lucide-react";
 
 export function IndustriesSection() {
   return (
-    <section id="industries" className="min-h-screen flex items-center py-20 bg-slate-950/50 border-t border-slate-800 relative z-20">
+    <section id="industries" className="py-20 bg-slate-950/50 border-t border-slate-800 relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">Purpose-Built for Your Industry</h2>
