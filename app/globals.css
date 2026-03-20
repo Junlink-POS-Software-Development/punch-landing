@@ -23,9 +23,6 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
   }
-  html {
-    scroll-behavior: smooth;
-  }
 }
 
 @layer utilities {
@@ -102,4 +99,52 @@
   .animate-aurora-2 { animation: aurora-2 15s ease-in-out infinite alternate-reverse; }
   .animate-aurora-3 { animation: aurora-3 12s ease-in-out infinite alternate; }
   .animate-aurora-4 { animation: aurora-4 18s ease-in-out infinite alternate-reverse; }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+  .animate-twinkle {
+    animation: twinkle var(--duration, 3s) ease-in-out infinite;
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(3vw, -3vh); }
+  }
+  .animate-float-slow {
+    animation: float-slow 25s ease-in-out infinite;
+  }
+
+  @keyframes float-slow-reverse {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-3vw, 2vh); }
+  }
+  .animate-float-reverse {
+    animation: float-slow-reverse 30s ease-in-out infinite;
+  }
+
+  @keyframes float-sideways {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(4vw, 1vh); }
+  }
+  .animate-float-sideways {
+    animation: float-sideways 35s ease-in-out infinite;
+  }
+
+  @keyframes firefly-pulse {
+    0%, 100% { 
+      opacity: 0.4; 
+      transform: scale(0.9); 
+      box-shadow: 0 0 10px 2px rgba(225, 255, 128, 0.2); 
+    }
+    50% { 
+      opacity: 1; 
+      transform: scale(1.4); 
+      box-shadow: 0 0 25px 8px rgba(225, 255, 200, 0.9), 0 0 50px 15px rgba(225, 255, 128, 0.5); 
+    }
+  }
+  .animate-firefly {
+    animation: firefly-pulse var(--duration, 4s) ease-in-out infinite;
+  }
 }

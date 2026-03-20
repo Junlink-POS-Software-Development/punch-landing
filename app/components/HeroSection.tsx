@@ -258,8 +258,12 @@ export function HeroSection() {
             ))}
 
             {/* Helper text */}
-            <div className="absolute top-4 right-4 text-xs font-semibold text-slate-400 bg-slate-900/60 backdrop-blur px-3 py-1.5 rounded-full border border-slate-800 shadow-sm">
+            <div className="absolute top-4 right-4 text-xs font-semibold text-slate-400 bg-slate-900/60 backdrop-blur px-3 py-1.5 rounded-full border border-slate-800 shadow-sm z-30">
               <span className="hidden sm:inline">Interactive Diagram: </span>Click on icons to inspect
+            </div>
+            
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[11px] font-medium text-slate-400 bg-slate-900/80 backdrop-blur-md px-4 py-2 rounded-full border border-slate-800 shadow-sm whitespace-nowrap z-30 opacity-80 sm:block hidden pointer-events-none transition-all duration-500">
+              <span className="text-blue-400 mr-1 animate-pulse inline-block">●</span> Real-time sync between POS terminals and Cloud Backoffice
             </div>
           </div>
 

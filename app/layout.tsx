@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Sometype_Mono } from "next/font/google";
+import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import "./globals.css";
 
 const inter = Inter({
@@ -30,9 +31,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${sometypeMono.variable} h-full antialiased dark`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${sometypeMono.variable} antialiased dark`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col font-body">{children}</body>
+      <body className="font-body antialiased overflow-x-hidden">
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   );
 }

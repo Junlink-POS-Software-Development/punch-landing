@@ -7,7 +7,7 @@ export function PricingSection() {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
-    <section id="pricing" className="py-24 bg-slate-950/50 backdrop-blur-xl relative z-20 border-t border-slate-800">
+    <section id="pricing" className="min-h-screen flex items-center py-24 bg-slate-950/50 relative z-20 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-sm font-bold mb-6 border border-emerald-500/20 shadow-sm">

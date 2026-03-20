@@ -2,7 +2,7 @@ import { LayoutDashboard, Terminal, Grid, Package, Settings, X, Minus, Plus, Sho
 
 export function MockupsSection() {
   return (
-    <section className="py-24 bg-slate-950/50 backdrop-blur-xl relative z-20 border-b border-slate-800">
+    <section className="min-h-screen flex items-center py-24 bg-slate-950/50 relative z-20 border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">

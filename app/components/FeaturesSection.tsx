@@ -48,7 +48,7 @@ const terminalFeatures = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="py-24 bg-slate-900/30 backdrop-blur-xl relative z-20">
+    <section id="features" className="min-h-screen flex items-center py-24 bg-slate-900/30 relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
