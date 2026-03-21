@@ -140,6 +140,30 @@
     animation: constellation-pulse 8s ease-in-out infinite;
   }
 
+  @keyframes hero-click-ripple {
+    0% { transform: scale(0.8); opacity: 0.8; }
+    100% { transform: scale(2); opacity: 0; }
+  }
+  .animate-hero-click {
+    animation: hero-click-ripple 0.6s ease-out forwards;
+  }
+
+  @keyframes hero-receipt-up {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  .animate-hero-receipt {
+    animation: hero-receipt-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes hero-data-stream {
+    from { stroke-dashoffset: 24; }
+    to { stroke-dashoffset: 0; }
+  }
+  .animate-hero-stream {
+    animation: hero-data-stream 1s linear infinite;
+  }
+
   @keyframes meteor {
     0% {
       transform: translate3d(0, 0, 0) rotate(-45deg);
