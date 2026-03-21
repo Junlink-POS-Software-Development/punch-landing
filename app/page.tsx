@@ -16,12 +16,9 @@ import { SocialProofSection } from "./components/SocialProofSection";
 
 function BackgroundElements() {
   const [stars, setStars] = useState<React.CSSProperties[]>([]);
-  const [fireflies1, setFireflies1] = useState<React.CSSProperties[]>([]);
-  const [fireflies2, setFireflies2] = useState<React.CSSProperties[]>([]);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setStars(
       [...Array(40)].map(() => ({
         top: `${Math.random() * 100}%`,
@@ -30,26 +27,6 @@ function BackgroundElements() {
         height: '1px',
         '--duration': `${3 + Math.random() * 5}s`,
         opacity: 0.2 + Math.random() * 0.4,
-      } as React.CSSProperties))
-    );
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setFireflies1(
-      [...Array(20)].map(() => ({
-        top: `${Math.random() * 100}%`,
-        left: `${Math.random() * 100}%`,
-        width: '1.5px',
-        height: '1.5px',
-        '--duration': `${3 + Math.random() * 3}s`,
-      } as React.CSSProperties))
-    );
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setFireflies2(
-      [...Array(15)].map(() => ({
-        top: `${Math.random() * 100}%`,
-        left: `${Math.random() * 100}%`,
-        width: '1px',
-        height: '1px',
-        '--duration': `${4 + Math.random() * 4}s`,
       } as React.CSSProperties))
     );
     setMounted(true);
@@ -69,31 +46,62 @@ function BackgroundElements() {
               style={style}
             />
           ))}
-        </div>
-      </div>
 
-      {/* 2. Middle Layer: Fireflies (Sharp, Above Glass) */}
-      <div className="fixed inset-0 z-30 pointer-events-none overflow-hidden">
-        {/* Fireflies Layer 1 (Drift Right) */}
-        <div className="absolute inset-0 animate-float-sideways opacity-80">
-          {fireflies1.map((style, i) => (
-            <div
-              key={`ff1-${i}`}
-              className="absolute rounded-full bg-yellow-50 animate-firefly"
-              style={style}
+          {/* Constellation 1: Orion-ish */}
+          <svg className="absolute top-[15%] left-[10%] w-32 h-48 animate-float-reverse animate-constellation" viewBox="0 0 100 150">
+            <path
+              d="M10,10 L40,30 L90,20 L60,80 L20,130 L10,10"
+              fill="none"
+              stroke="white"
+              strokeWidth="0.5"
             />
-          ))}
-        </div>
+            {[[10,10], [40,30], [90,20], [60,80], [20,130]].map(([x, y], i) => (
+              <circle key={i} cx={x} cy={y} r="2" fill="white" />
+            ))}
+          </svg>
 
-        {/* Fireflies Layer 2 (Drift Left) */}
-        <div className="absolute inset-0 animate-float-reverse opacity-80">
-          {fireflies2.map((style, i) => (
-            <div
-              key={`ff2-${i}`}
-              className="absolute rounded-full bg-lime-50 animate-firefly"
-              style={style}
+          {/* Performant Meteor Showers */}
+          <div className="absolute top-[5%] right-[20%] w-[120px] h-[1px] bg-gradient-to-l from-transparent to-white/70 animate-meteor" style={{ '--duration': '14s', '--delay': '2s' } as React.CSSProperties}>
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-[2px] bg-white rounded-full shadow-[0_0_8px_1px_white]" />
+          </div>
+          <div className="absolute top-[10%] right-[5%] w-[100px] h-[1px] bg-gradient-to-l from-transparent to-white/50 animate-meteor" style={{ '--duration': '19s', '--delay': '7s' } as React.CSSProperties}>
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[1.5px] h-[1.5px] bg-white rounded-full shadow-[0_0_8px_1px_white]" />
+          </div>
+          <div className="absolute top-[-10%] right-[40%] w-[200px] h-[1px] bg-gradient-to-l from-transparent to-white/80 animate-meteor" style={{ '--duration': '11s', '--delay': '13s' } as React.CSSProperties}>
+             <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[2.5px] h-[2.5px] bg-white rounded-full shadow-[0_0_10px_2px_white]" />
+          </div>
+          <div className="absolute top-[30%] right-[-10%] w-[150px] h-[1px] bg-gradient-to-l from-transparent to-white/60 animate-meteor" style={{ '--duration': '16s', '--delay': '18s' } as React.CSSProperties}>
+             <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-[2px] bg-white rounded-full shadow-[0_0_8px_1px_white]" />
+          </div>
+          <div className="absolute top-[40%] right-[10%] w-[80px] h-[1px] bg-gradient-to-l from-transparent to-cyan-200/50 animate-meteor" style={{ '--duration': '22s', '--delay': '25s' } as React.CSSProperties}>
+             <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[1.5px] h-[1.5px] bg-cyan-100 rounded-full shadow-[0_0_6px_1px_cyan]" />
+          </div>
+
+          {/* Constellation 2: Little Dipper-ish */}
+          <svg className="absolute top-[60%] right-[15%] w-48 h-32 animate-float-sideways animate-constellation" style={{ animationDelay: '2s' }} viewBox="0 0 150 100">
+            <path
+              d="M10,80 L40,70 L70,80 L100,60 L130,40 L140,10"
+              fill="none"
+              stroke="white"
+              strokeWidth="0.5"
             />
-          ))}
+            {[[10,80], [40,70], [70,80], [100,60], [130,40], [140,10]].map(([x, y], i) => (
+              <circle key={i} cx={x} cy={y} r="1.5" fill="white" />
+            ))}
+          </svg>
+
+          {/* Constellation 3: Abstract Triangle */}
+          <svg className="absolute bottom-[10%] left-[30%] w-24 h-24 animate-constellation" style={{ animationDelay: '4s' }} viewBox="0 0 100 100">
+            <path
+              d="M10,90 L50,10 L90,90 Z"
+              fill="none"
+              stroke="white"
+              strokeWidth="0.5"
+            />
+            {[[10,90], [50,10], [90,90]].map(([x, y], i) => (
+              <circle key={i} cx={x} cy={y} r="1" fill="white" />
+            ))}
+          </svg>
         </div>
       </div>
     </>

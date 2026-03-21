@@ -132,19 +132,35 @@
     animation: float-sideways 35s ease-in-out infinite;
   }
 
-  @keyframes firefly-pulse {
-    0%, 100% { 
-      opacity: 0.4; 
-      transform: scale(0.9); 
-      box-shadow: 0 0 10px 2px rgba(225, 255, 128, 0.2); 
+  @keyframes constellation-pulse {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.6; }
+  }
+  .animate-constellation {
+    animation: constellation-pulse 8s ease-in-out infinite;
+  }
+
+  @keyframes meteor {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(-45deg);
+      opacity: 0;
     }
-    50% { 
-      opacity: 1; 
-      transform: scale(1.4); 
-      box-shadow: 0 0 25px 8px rgba(225, 255, 200, 0.9), 0 0 50px 15px rgba(225, 255, 128, 0.5); 
+    1% {
+      opacity: 1;
+    }
+    30% {
+      transform: translate3d(-1500px, 1500px, 0) rotate(-45deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translate3d(-1500px, 1500px, 0) rotate(-45deg);
+      opacity: 0;
     }
   }
-  .animate-firefly {
-    animation: firefly-pulse var(--duration, 4s) ease-in-out infinite;
+  .animate-meteor {
+    animation: meteor var(--duration, 10s) linear infinite;
+    animation-delay: var(--delay, 0s);
+    opacity: 0;
+    pointer-events: none;
   }
 }
